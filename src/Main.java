@@ -13,7 +13,7 @@ public class Main {
         System.out.println();
         pl.printList();
         System.out.println();
-        pl.findPatient(103);
+        pl.findPatient(104);
 
     }
 }
