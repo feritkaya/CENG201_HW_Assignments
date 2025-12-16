@@ -1,13 +1,19 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
+        PatientList pl = new PatientList();
+        pl.addPatient(new Patient(100, "Atlas", 3, 19));
+        pl.addPatient(new Patient(101, "Asım" , 7, 48));
+        pl.addPatient(new Patient(102, "Gökçe", 2, 33));
+        pl.addPatient(new Patient(103, "Berfu", 6, 26));
+        pl.addPatient(new Patient(104, "Derin", 9, 10));
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        pl.printList();
+        System.out.println();
+        pl.removePatient(102);
+        System.out.println();
+        pl.printList();
+        System.out.println();
+        pl.findPatient(103);
+
     }
 }
