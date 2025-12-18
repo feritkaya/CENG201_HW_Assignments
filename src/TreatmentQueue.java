@@ -7,14 +7,16 @@ public class TreatmentQueue {
         TreatmentRequest data;
         Node next;
 
-        Node(TreatmentRequest t1) {
-            data = t1;
-            next = null;
+        Node() {
+            this.data = null;
+            this.next = null;
         }
     }
 
     void enqueue(TreatmentRequest t2) {
-        Node node = new Node(t2);
+        Node node = new Node();
+        node.data = t2;
+
 
         if (isEmpty()) {
             front = node;
@@ -40,6 +42,10 @@ public class TreatmentQueue {
         TreatmentRequest current = front.data;
         front = front.next;
         size--;
+
+        if (front == null) {
+            rear = null;
+        }
         System.out.println("Request completed and removed from the queue.");
         return current;
     }

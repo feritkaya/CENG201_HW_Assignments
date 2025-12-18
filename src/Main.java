@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
 //        PatientList pl = new PatientList();
 //        pl.addPatient(new Patient(100, "Atlas", 3, 19));
 //        pl.addPatient(new Patient(101, "Asım" , 7, 48));
@@ -15,26 +16,24 @@ public class Main {
 //        System.out.println();
 //        pl.findPatient(104);
 
-        TreatmentQueue tq = new TreatmentQueue();
-
-        tq.enqueue(new TreatmentRequest(110));
-        tq.enqueue(new TreatmentRequest(111));
-        tq.enqueue(new TreatmentRequest(112));
-        tq.enqueue(new TreatmentRequest(113));
-        tq.enqueue(new TreatmentRequest(114));
-        tq.enqueue(new TreatmentRequest(115));
-        tq.enqueue(new TreatmentRequest(116));
-        tq.enqueue(new TreatmentRequest(117));
-        System.out.println("-Queue after 8 enqueues-");
-        tq.printQueue();
-        System.out.println("-After 3 dequeues-");
-        tq.dequeue();
-        tq.dequeue();
-        tq.dequeue();
-
-        tq.printQueue();
-
-
+//        TreatmentQueue tq = new TreatmentQueue();
+//
+//        tq.enqueue(new TreatmentRequest(110));
+//        tq.enqueue(new TreatmentRequest(111));
+//        tq.enqueue(new TreatmentRequest(112));
+//        tq.enqueue(new TreatmentRequest(113));
+//        tq.enqueue(new TreatmentRequest(114));
+//        tq.enqueue(new TreatmentRequest(115));
+//        tq.enqueue(new TreatmentRequest(116));
+//        tq.enqueue(new TreatmentRequest(117));
+//        System.out.println("-Queue after 8 enqueues-");
+//        tq.printQueue();
+//        System.out.println("-After 3 dequeues-");
+//        tq.dequeue();
+//        tq.dequeue();
+//        tq.dequeue();
+//
+//        tq.printQueue();
 
     }
 }
