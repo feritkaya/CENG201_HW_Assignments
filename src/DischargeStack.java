@@ -55,7 +55,7 @@ public class DischargeStack {
         }
         Node current = top;
         while (current != null){
-            System.out.println("Patient ID: " + current.data.patientId + ", Discharge Time: " + current.data.dischargeTime);
+            System.out.println("Patient ID: " + current.data.patientId);
             current = current.next;
         }
     }
