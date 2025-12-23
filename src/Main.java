@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
+//        ---TASK-1 TEST---
+
 //        PatientList pl = new PatientList();
 //        pl.addPatient(new Patient(100, "Atlas", 3, 19));
 //        pl.addPatient(new Patient(101, "Asım" , 7, 48));
@@ -15,6 +17,8 @@ public class Main {
 //        pl.printList();
 //        System.out.println();
 //        pl.findPatient(104);
+
+//        ---TASK-2 TEST---
 
 //        TreatmentQueue tq = new TreatmentQueue();
 //
@@ -35,19 +39,22 @@ public class Main {
 //
 //        tq.printQueue();
 
-        DischargeStack ds = new DischargeStack();
-        ds.push(new DischargeRecord(300));
-        ds.push(new DischargeRecord(301));
-        ds.push(new DischargeRecord(302));
-        ds.push(new DischargeRecord(303));
-        ds.push(new DischargeRecord(304));
+//        ---TASK-3 TEST---
 
-        ds.printStack();
-
-        ds.pop();
-        ds.pop();
-
-        ds.printStack();
+//        DischargeStack ds = new DischargeStack();
+//
+//        ds.push(new DischargeRecord(300));
+//        ds.push(new DischargeRecord(301));
+//        ds.push(new DischargeRecord(302));
+//        ds.push(new DischargeRecord(303));
+//        ds.push(new DischargeRecord(304));
+//
+//        ds.printStack();
+//
+//        ds.pop();
+//        ds.pop();
+//
+//        ds.printStack();
 
     }
 }
