@@ -9,7 +9,10 @@ public class HospitalSystem {
     // using a HashMap for quick searching
     HashMap<Integer, Patient> patientMap = new HashMap<>();
 
-
+    void addPatient(Patient p) {
+        patients.addPatient(p);
+        patientMap.put(p.id, p);
+    }
 
 
 
