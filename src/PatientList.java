@@ -1,8 +1,11 @@
-public class PatientList { // patient list class
-    Node head = null; // head of the list
-    Node tail = null; // tail of the list
 
-    class Node { // node class
+public class PatientList {
+    // patient list class
+    Node head = null; // list's head
+    Node tail = null; // list's tail
+
+    // node class
+    class Node {
         Patient data;
         Node next;
 
@@ -12,80 +15,82 @@ public class PatientList { // patient list class
         }
     }
 
-    void addPatient(Patient p) { // add patient to the list
-        Node eleman = new Node(); // generate new node
+    // add patient to list
+    void addPatient(Patient p) {
+        Node eleman = new Node(); // generate node
         eleman.data = p; // define data
 
-        if (head == null) { // check if the list is empty
+        // list is empty?
+        if (head == null) {
             eleman.next = null;
             head = eleman;
             tail = eleman;
-            System.out.println("The first patient was added.");
-        } else { // if the list is not empty
+            System.out.println("first patient was added.");
+
+        // list isn't empty?
+        } else {
             eleman.next = null;
             tail.next = eleman;
             tail = eleman;
-            System.out.println("Patient added to the list.");
+            System.out.println("patient added to list.");
         }
     }
 
-    void removePatient(int id) { // delete patient from the list
-        if (head == null) { // check if the list is empty
-            System.out.println("The list is empty.");
+    // delete patient from list
+    void removePatient(int id) {
+        // list is empty?
+        if (head == null) {
+            System.out.println("list is empty.");
             return;
         }
-
-        if (head.data.id == id) { // patient deletion from the head node
+        // patient deletion from head
+        if (head.data.id == id) {
             head = head.next;
-            System.out.println("Patient-ID " + id + " removed from the list.");
+            System.out.println("patient-ID " + id + " removed from list.");
             return;
         }
-
-        Node current = head; // traverse and start from the head
-        while (current.next != null) { // Continue by checking the next node
-            if (current.next.data.id == id) { // If the next node is equal to the searched ID
-                if (current.next == tail) {
+        //traverse and start from head
+        Node current = head;
+        while (current.next != null) { // Continue by checking next
+            if (current.next.data.id == id) { // if next node is equal to searched ID
+                if (current.next == tail)
                     tail = current;
-                }
 
-                current.next = current.next.next; // break the link , connect the current node to the new node
-                System.out.println("Patient-ID " + id + " removed from the list.");
+                current.next = current.next.next; // break the link connect current node to new node
+                System.out.println("patient-ID " + id + " removed from list.");
                 return;
             }
-            current = current.next; // move on to the next node
+            current = current.next; // move on to next
         }
-        System.out.println("Patient-ID " + id + " wasn't found in the list.");
+        System.out.println("patient-ID " + id + " wasn't found in list.");
 
     }
 
-    Patient findPatient(int id) { // find patient in the list
+    // finding patient in list
+    Patient findPatient(int id) {
         Node current = head; // traverse and start from the head
-        while (current != null) { // go through all the nodes one by one
-            if (current.data.id == id) { //  if the patient is found, print information to the console
-                System.out.println("The patient was found ID " + current.data.id);
-                System.out.println("ID: " + current.data.id +
-                        " - Name: " + current.data.name +
-                        " - Severity: " + current.data.severity +
-                        " - Age: " + current.data.age
-                );
+
+        // go all nodes one by one
+        while (current != null) {
+            if (current.data.id == id) { //  if the patient is found, print information to console
+                System.out.println("patient was found ID " + current.data.id);
+                System.out.println("ID: " + current.data.id + " - Name: " + current.data.name + " - Severity: " + current.data.severity + " - Age: " + current.data.age);
                 return current.data;
             }
             current = current.next;
         }
-        System.out.println("The patient wasn't found."); // the patient is not on the list.
+        System.out.println("patient wasn't found."); // patient isn't on list
         return null;
     }
 
     void printList() {
         Node current = head;
-        while (current != null) { // go through all the nodes one by one
-            System.out.println( // print patient information to the console
-                    "ID: " + current.data.id +
-                    " - Name: " + current.data.name +
-                    " - Severity: " + current.data.severity +
-                    " - Age: " + current.data.age
-            );
-            current = current.next; // move on to the next node
+
+        // go all nodes one by one
+        while (current != null) {
+            // print patient information to console
+            System.out.println("id: " + current.data.id + " name: " + current.data.name + " severity: " + current.data.severity + " age: " + current.data.age);
+            current = current.next; // move on to next
         }
     }
 
