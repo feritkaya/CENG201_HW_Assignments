@@ -1,8 +1,9 @@
 public class DischargeRecord { // discharge record class
-    int patientId; // patient ID
-    long dischargeTime; // discharge time in milliseconds
+    int patientId; // patient id
+    long dischargeTime; // discharge time
 
-    public DischargeRecord(int patientId) { // constructor method
+    // constructor method
+    public DischargeRecord(int patientId) {
         this.patientId = patientId;
         this.dischargeTime = System.currentTimeMillis();
     }

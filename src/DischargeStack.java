@@ -1,8 +1,10 @@
-public class DischargeStack { // discharge stack class
-    Node top = null;;// top of stack
+// discharge stack class
+public class DischargeStack {
+    Node top = null; // stack's top
     int size = 0;
 
-    class Node { // node class
+    // node class
+    class Node {
         DischargeRecord data;
         Node next;
 
@@ -11,13 +13,14 @@ public class DischargeStack { // discharge stack class
             this.next = null;
         }
     }
-
-    private boolean isEmpty() { // check the occupancy of the stack
+    // checking stack's occupancy
+    private boolean isEmpty() {
         return size == 0;
     }
 
-    void push(DischargeRecord d1) { // push operation
-        Node node = new Node(); // generate new node
+    // push operation
+    void push(DischargeRecord d1) {
+        Node node = new Node(); // generate node
         node.data = d1; // define data
 
         if (isEmpty()){
@@ -29,7 +32,8 @@ public class DischargeStack { // discharge stack class
         size++;
     }
 
-    DischargeRecord pop(){ // pop operation
+    // pop operation
+    DischargeRecord pop(){
         if (isEmpty()){
             return null;
         }else {
@@ -39,8 +43,8 @@ public class DischargeStack { // discharge stack class
             return current;
         }
     }
-
-    DischargeRecord peek(){ // peek operation
+    // peek operation
+    DischargeRecord peek(){
         if (isEmpty()){
             return null;
         }else {
@@ -48,12 +52,15 @@ public class DischargeStack { // discharge stack class
         }
     }
 
-    void printStack(){ // print stack
+    // print stack
+    void printStack(){
         if (isEmpty()){
             System.out.println("EMPTY");
             return;
         }
-        Node current = top; // traverse and start from the top
+
+        // traverse and start from the top
+        Node current = top;
         while (current != null){
             System.out.println("Patient ID: " + current.data.patientId);
             current = current.next;
