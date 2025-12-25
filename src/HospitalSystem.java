@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class HospitalSystem {
-    // lets move the classes from other tasks here and combine them
+    // lets move classes from other tasks here and combine them
     PatientList patients = new PatientList();
     TreatmentQueue treatmentQueue = new TreatmentQueue();
     TreatmentQueue priorityQueue = new TreatmentQueue(); // for priority patients
