@@ -2,15 +2,17 @@ import java.util.HashMap;
 
 public class HospitalSystem {
     // lets move classes from other tasks here and combine them
-    PatientList pls = new PatientList();
-    TreatmentQueue tqs = new TreatmentQueue();
+
+    PatientList ptlist = new PatientList();
+    TreatmentQueue tqueue1 = new TreatmentQueue();
     TreatmentQueue urg = new TreatmentQueue();
-    DischargeStack dss = new DischargeStack();
+    DischargeStack dstack = new DischargeStack();
+
     // using a HashMap for quick searching
     HashMap<Integer, Patient> patientMap = new HashMap<>();
 
     public void patientAdmission(Patient p) {
-        pls.addPatient(p);
+        ptlist.addPatient(p);
         patientMap.put(p.id, p);
     }
 
@@ -19,13 +21,13 @@ public class HospitalSystem {
         if (urgency) {
             urg.enqueue(tr);
         } else {
-            tqs.enqueue(tr);
+            tqueue1.enqueue(tr);
         }
     }
 
     public void patientDischarge(int id) {
         DischargeRecord dr = new DischargeRecord(id);
-        dss.push(dr);
+        dstack.push(dr);
     }
 
     public void patientProcess(){
@@ -33,7 +35,7 @@ public class HospitalSystem {
         if (!urg.isEmpty()) {
             tr = urg.dequeue();
         } else {
-            tr = tqs.dequeue();
+            tr = tqueue1.dequeue();
         }
 
         if (tr == null) {
@@ -41,8 +43,8 @@ public class HospitalSystem {
             return;
         }
 
-        dss.push(new DischargeRecord(tr.patientId));
-        pls.removePatient(tr.patientId);
+        dstack.push(new DischargeRecord(tr.patientId));
+        ptlist.removePatient(tr.patientId);
         patientMap.remove(tr.patientId);
     }
     public void sortingPatients(){
@@ -62,17 +64,17 @@ public class HospitalSystem {
     }
 
     public void printSystemState() {
-        System.out.println("patient list:");
-        pls.printList();
+        System.out.println("patient in hospital:");
+        ptlist.printList();
 
         System.out.println("urgent queue:");
         urg.printQueue();
 
-        System.out.println("normal queue:");
-        tqs.printQueue();
+        System.out.println("waiting normal queue:");
+        tqueue1.printQueue();
 
         System.out.println("discharge stack:");
-        dss.printStack();
+        dstack.printStack();
     }
 
 

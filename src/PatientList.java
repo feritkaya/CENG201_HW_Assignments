@@ -36,10 +36,9 @@ public class PatientList {
     void removePatient(int id) {
         // list is empty?
         if (head == null) {
-            System.out.println("list is empty.");
+            System.out.println("this list is empty.");
             return;
         }
-        // patient deletion from head
         if (head.data.id == id) {
             head = head.next;
             System.out.println("patient id " + id + " removed");
