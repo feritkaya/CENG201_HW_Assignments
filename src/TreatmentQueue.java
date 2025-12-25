@@ -33,7 +33,7 @@ public class TreatmentQueue {
     }
 
     // checking queue's occupancy
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 

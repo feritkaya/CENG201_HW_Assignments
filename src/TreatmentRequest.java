@@ -1,4 +1,4 @@
-public class TreatmentRequest { // treatment request class
+public class TreatmentRequest {
     int patientId; // patient ID
     long arrivalTime; // arrival time
     boolean urgency;
