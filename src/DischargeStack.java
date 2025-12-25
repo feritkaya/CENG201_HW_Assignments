@@ -1,9 +1,7 @@
-// discharge stack class
 public class DischargeStack {
     Node top = null; // stack's top
     int size = 0;
 
-    // node class
     class Node {
         DischargeRecord data;
         Node next;
@@ -55,14 +53,14 @@ public class DischargeStack {
     // print stack
     void printStack(){
         if (isEmpty()){
-            System.out.println("EMPTY");
+            System.out.println("empty");
             return;
         }
 
         // traverse and start from the top
         Node current = top;
         while (current != null){
-            System.out.println("Patient ID: " + current.data.patientId);
+            System.out.println("patient id: " + current.data.patientId);
             current = current.next;
         }
     }
