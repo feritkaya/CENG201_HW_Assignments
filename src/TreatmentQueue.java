@@ -3,7 +3,6 @@ public class TreatmentQueue {
     Node rear = null;  // queue's tail
     int size = 0;
 
-    // node class
     class Node {
         TreatmentRequest data;
         Node next;
@@ -22,13 +21,13 @@ public class TreatmentQueue {
         if (isEmpty()) {
             front = node; // new added element becomes both front and rear
             rear = node;
-            System.out.println("first request added.");
+            System.out.println("first request added");
 
         // current last element's next reference  links to new node
         } else {
             rear.next = node;
             rear = node;
-            System.out.println("request added.");
+            System.out.println("request added");
         }
         size++;
     }
@@ -41,7 +40,7 @@ public class TreatmentQueue {
     TreatmentRequest dequeue() {
         // queue is empty?
         if (isEmpty()) {
-            System.out.println("queue is empty.");
+            System.out.println("queue is empty");
             return null;
         }
         // assigning front to temporary variable
@@ -54,7 +53,7 @@ public class TreatmentQueue {
         if (front == null) {
             rear = null;
         }
-        System.out.println("request completed and removed from queue.");
+        System.out.println("request completed and removed from queue");
         return current;
     }
 
@@ -65,7 +64,7 @@ public class TreatmentQueue {
     void printQueue() {
         // queue is empty?
         if (isEmpty()) {
-            System.out.println("queue is empty.");
+            System.out.println("queue is empty");
             return;
         }
         // traverse and start from front
@@ -75,7 +74,7 @@ public class TreatmentQueue {
         // go all nodes one by one
         while (current != null) {
             // print current node's data
-            System.out.println("Patient ID: " + current.data.patientId + " arrivalTime: " + current.data.arrivalTime);
+            System.out.println("patient id: " + current.data.patientId + " arrivaltime: " + current.data.arrivalTime);
             current = current.next; // move on to next node
         }
         System.out.println("rear");
