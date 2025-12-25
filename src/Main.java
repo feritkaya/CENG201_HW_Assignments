@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-//        ---TASK-1 TEST---
+//        ---TASK 1 TEST---
 
 //        PatientList pl = new PatientList();
 //        pl.addPatient(new Patient(100, "Atlas", 3, 19));
@@ -55,6 +55,45 @@ public class Main {
 //        ds.pop();
 //
 //        ds.printStack();
+
+//        HospitalSystem hs = new HospitalSystem();
+//        hs.patientAdmission(new Patient(700, "Elif", 6, 23));
+//        hs.patientAdmission(new Patient(701, "Ferit", 7, 21));
+//        hs.patientAdmission(new Patient(702, "Berkay", 14, 22));
+//        hs.patientAdmission(new Patient(703, "Yağız", 2, 20));
+//        hs.patientAdmission(new Patient(704, "Faruk", 5, 24));
+//        hs.patientAdmission(new Patient(705, "Aylin", 9, 26));
+//        hs.patientAdmission(new Patient(706, "Eren", 1, 30));
+//        hs.patientAdmission(new Patient(707, "Talim", 3, 50));
+//        hs.patientAdmission(new Patient(708, "Özgür", 10, 41));
+//        hs.patientAdmission(new Patient(709, "Mustafa", 4, 47));
+//
+//        hs.patientTreatmentRequest(700, false);
+//        hs.patientTreatmentRequest(701, true);
+//        hs.patientTreatmentRequest(702, false);
+//        hs.patientTreatmentRequest(703, true);
+//        hs.patientTreatmentRequest(704, false);
+//
+//        hs.patientTreatmentRequest(706, true);
+//        hs.patientTreatmentRequest(709, true);
+//        hs.patientTreatmentRequest(708, true);
+//
+//        hs.patientDischarge(707);
+//        hs.patientDischarge(705);
+//
+//
+//        System.out.println("--- SORTING PATIENTS ---");
+//        hs.sortingPatients();
+//
+//        System.out.println("--- PROCESSING 4 REQUESTS ---");
+//        hs.patientProcess();
+//        hs.patientProcess();
+//        hs.patientProcess();
+//        hs.patientProcess();
+//
+//
+//        System.out.println("--- FINAL SYSTEM STATE ---");
+//        hs.printSystemState();
 
     }
 }
