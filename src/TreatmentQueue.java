@@ -12,7 +12,7 @@ public class TreatmentQueue {
             front = node; // new added element becomes both front and rear
             rear = node;
 
-        // current last element's next reference  links to new node
+        // present last element's next reference links to new node
         } else {
             rear.next = node;
             rear = node;
@@ -31,12 +31,12 @@ public class TreatmentQueue {
             System.out.println("queue is empty");
             return null;
         }
-        // assigning front to temporary variable
+        // assigning front to passing variable
         TreatmentRequest current = front.data;
         front = front.next; // move front to next node
         size--; // reduce size
 
-        // ıf last element is removed and front becomes null
+        // ıf last element is removed, front becomes null
         // rear must be null
         if (front == null) {
             rear = null;
@@ -55,13 +55,13 @@ public class TreatmentQueue {
             System.out.println("queue is empty");
             return;
         }
-        // traverse and start from front
+        // traverse, start from front
         Node2 current = front;
         System.out.println("front");
 
         // go all nodes one by one
         while (current != null) {
-            // print current node's data
+            // print present node's data
             System.out.println("patient id: " + current.data.patientId + " arrivaltime: " + current.data.arrivalTime);
             current = current.next; // move on to next node
         }

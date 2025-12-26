@@ -48,7 +48,7 @@ public class DischargeStack {
             return;
         }
 
-        // traverse and start from the top
+        // traverse, start from the top
         Node3 current = top;
         while (current != null){
             System.out.println("patient id: " + current.data.patientId);

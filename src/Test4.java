@@ -3,7 +3,7 @@ public class Test4 {
 
         HospitalSystem hs = new HospitalSystem();
 
-        // add 10 patients
+        // adding 10 patients
         hs.patientAdmission(new Patient(700, "Elif", 6, 23));
         hs.patientAdmission(new Patient(701, "Ferit", 7, 21));
         hs.patientAdmission(new Patient(702, "Berkay", 14, 22));
@@ -23,7 +23,7 @@ public class Test4 {
         hs.patientTreatmentRequest(703, false);
         hs.patientTreatmentRequest(704, false);
 
-        // 3 priority treatment requests
+        // 3 urgent treatment requests
         hs.patientTreatmentRequest(706, true);
         hs.patientTreatmentRequest(709, true);
         hs.patientTreatmentRequest(708, true);

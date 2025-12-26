@@ -31,7 +31,7 @@ public class PatientList {
             System.out.println("patient id " + id + " removed");
             return;
         }
-        //traverse and start from head
+        //traverse, start from head
         Node1 current = head;
         while (current.next != null) {
             if (current.next.data.id == id) {
@@ -49,7 +49,7 @@ public class PatientList {
     }
 
     Patient findPatient(int id) {
-        Node1 current = head; // traverse and start from the head
+        Node1 current = head; // traverse, start from the head
         // go all nodes one by one
         while (current != null) {
             if (current.data.id == id) {
