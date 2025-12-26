@@ -33,7 +33,7 @@ public class PatientList {
         }
         //traverse and start from head
         Node1 current = head;
-        while (current.next != null & current.next.data.id == id) {
+        while (current.next != null) {
             if (current.next.data.id == id) {
                 if (current.next == tail)
                     tail = current;
