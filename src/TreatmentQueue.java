@@ -1,33 +1,21 @@
 public class TreatmentQueue {
-    Node front = null; // queue's head
-    Node rear = null;  // queue's tail
+    Node2 front = null; // queue's head
+    Node2 rear = null;  // queue's tail
     int size = 0;
 
-    class Node {
-        TreatmentRequest data;
-        Node next;
-
-        Node() {
-            this.data = null;
-            this.next = null;
-        }
-    }
-
     void enqueue(TreatmentRequest t2) {
-        Node node = new Node(); // generate node
+        Node2 node = new Node2(); // generate node
         node.data = t2; // define data
 
         // queue is empty?
         if (isEmpty()) {
             front = node; // new added element becomes both front and rear
             rear = node;
-            System.out.println("first request added");
 
         // current last element's next reference  links to new node
         } else {
             rear.next = node;
             rear = node;
-            System.out.println("request added");
         }
         size++;
     }
@@ -53,7 +41,7 @@ public class TreatmentQueue {
         if (front == null) {
             rear = null;
         }
-        System.out.println("request completed and removed from queue");
+
         return current;
     }
 
@@ -68,7 +56,7 @@ public class TreatmentQueue {
             return;
         }
         // traverse and start from front
-        Node current = front;
+        Node2 current = front;
         System.out.println("front");
 
         // go all nodes one by one

@@ -1,20 +1,9 @@
 public class PatientList {
-    Node head = null; // list's head
-    Node tail = null; // list's tail
-
-    // node class
-    class Node {
-        Patient data;
-        Node next;
-
-        Node() {
-            this.data = data;
-            this.next = null;
-        }
-    }
+    Node1 head = null; // list's head
+    Node1 tail = null; // list's tail
 
     void addPatient(Patient p) {
-        Node eleman = new Node(); // generate node
+        Node1 eleman = new Node1(); // generate node
         eleman.data = p; // define data
 
         // list is empty?
@@ -22,21 +11,19 @@ public class PatientList {
             eleman.next = null;
             head = eleman;
             tail = eleman;
-            System.out.println("first patient added ");
 
         // list isn't empty?
         } else {
             eleman.next = null;
             tail.next = eleman;
             tail = eleman;
-            System.out.println("patient added ");
+
         }
     }
 
     void removePatient(int id) {
         // list is empty?
         if (head == null) {
-            System.out.println("this list is empty.");
             return;
         }
         if (head.data.id == id) {
@@ -45,8 +32,8 @@ public class PatientList {
             return;
         }
         //traverse and start from head
-        Node current = head;
-        while (current.next != null) {
+        Node1 current = head;
+        while (current.next != null & current.next.data.id == id) {
             if (current.next.data.id == id) {
                 if (current.next == tail)
                     tail = current;
@@ -62,7 +49,7 @@ public class PatientList {
     }
 
     Patient findPatient(int id) {
-        Node current = head; // traverse and start from the head
+        Node1 current = head; // traverse and start from the head
         // go all nodes one by one
         while (current != null) {
             if (current.data.id == id) {
@@ -77,7 +64,7 @@ public class PatientList {
     }
 
     void printList() {
-        Node current = head;
+        Node1 current = head;
 
         // go all nodes one by one
         while (current != null) {

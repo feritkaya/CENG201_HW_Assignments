@@ -1,16 +1,7 @@
 public class DischargeStack {
-    Node top = null; // stack's top
+    Node3 top = null; // stack's top
     int size = 0;
 
-    class Node {
-        DischargeRecord data;
-        Node next;
-
-        Node() {
-            this.data = null;
-            this.next = null;
-        }
-    }
     // checking stack's occupancy
     private boolean isEmpty() {
         return size == 0;
@@ -18,7 +9,7 @@ public class DischargeStack {
 
     // push operation
     void push(DischargeRecord d1) {
-        Node node = new Node(); // generate node
+        Node3 node = new Node3(); // generate node
         node.data = d1; // define data
 
         if (isEmpty()){
@@ -58,7 +49,7 @@ public class DischargeStack {
         }
 
         // traverse and start from the top
-        Node current = top;
+        Node3 current = top;
         while (current != null){
             System.out.println("patient id: " + current.data.patientId);
             current = current.next;
